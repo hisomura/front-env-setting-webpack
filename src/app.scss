@@ -1,0 +1,15 @@
+body {
+  background-color: aliceblue;
+}
+
+h1 {
+  font-size: 2em;
+  transition: all .3s;
+  color: blue;
+  border-radius: 5px;
+
+  &:hover {
+    transform: translateX(50px);
+    color: red;
+  }
+}
