@@ -1,4 +1,4 @@
-import sub from './sub'
+// import sub from './sub'
 
 import './app.scss'
 

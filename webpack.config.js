@@ -12,9 +12,15 @@ module.exports = {
   module: {
     rules: [
       {
+        enforce: "pre",
         test: /\.js$/,
         exclude: /node_modules/,
-        use: 'babel-loader',
+        loader: 'eslint-loader',
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader",
       },
       {
         test: /\.scss$/,
@@ -25,7 +31,8 @@ module.exports = {
           'postcss-loader',
           'sass-loader'
         ]
-      }, {
+      },
+      {
         test: /\.(jpe?g|gif|png|svg|woff2?|ttf|eot)$/,
         use: [
           {
