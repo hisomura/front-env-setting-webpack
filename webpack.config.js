@@ -7,7 +7,7 @@ module.exports = {
   entry: {app: './src/app.js', sub: './src/sub.js'},
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: '[name].[chunkhash].js'
+    filename: '[name].bundle.js'
   },
   module: {
     rules: [
@@ -42,7 +42,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].[chunkhash].css'
+      filename: '[name].css'
     })
   ]
 }
