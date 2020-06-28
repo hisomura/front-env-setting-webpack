@@ -1,6 +1,5 @@
-// import sub from './sub'
-
-import './app.scss'
+import 'js/sub'
+import '@scss/app'
 
 const init = async () => {
   await asyncFn()
