@@ -75,7 +75,8 @@ module.exports =({outputFile, assetFile}) => ({
         },
         utils: {
           name: "utils",
-          test: /src[\\/]js[\\/]utils/,
+          test: /src[\\/]/,
+          chunks: "initial"
         },
         default: false
         // default: {
