@@ -1,9 +1,5 @@
-import 'js/sub'
-// import '@scss/app'
-
 setTimeout(() => {
-  // import ('js/sub')
-  import ('scss/app.scss')
+  import ('@scss/app')
 }, 2000)
 
 const init = async () => {
