@@ -5,6 +5,7 @@ import './app.scss'
 const init = async () => {
   await asyncFn()
   console.log("This is a main js file.")
+  jQuery()
 }
 
 async function asyncFn() {

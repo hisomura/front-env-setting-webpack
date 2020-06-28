@@ -34,7 +34,8 @@
     "html-loader": "^1.1.0",
     "webpack-merge": "^4.2.2",
     "rimraf": "^3.0.2",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "jquery": "^3.5.1"
   },
   "browserslist": [
     ",> 0.1%",
