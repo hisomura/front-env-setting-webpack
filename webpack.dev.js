@@ -8,6 +8,13 @@ const assetFile = '[name]'
 module.exports = () => webpackMerge(commonConf({outputFile, assetFile}), {
   mode: 'development',
   devtool: 'source-map',
+  devServer: {
+    open: true,
+    contentBase: './public',
+    watchOptions: {
+      ignored: './node_modules'
+    }
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
