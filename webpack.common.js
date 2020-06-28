@@ -6,7 +6,8 @@ module.exports =({outputFile, assetFile}) => ({
   entry: {app: './src/app.js', sub: './src/sub.js'},
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: `${outputFile}.js`
+    filename: `${outputFile}.js`,
+    chunkFilename: `${outputFile}.js`,
   },
   module: {
     rules: [
@@ -58,7 +59,31 @@ module.exports =({outputFile, assetFile}) => ({
     }),
     new ProvidePlugin({
       jQuery: 'jquery',
-      $: 'jquery'
+      $: 'jquery',
+      utils: [path.resolve(__dirname, 'src/utils'), 'default']
     })
-  ]
+  ],
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+      minSize: 0,
+      cacheGroups: {
+        defaultVendors: {
+          name: "vendors",
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10
+        },
+        utils: {
+          name: "utils",
+          test: /src[\\/]utils/,
+        },
+        default: false
+        // default: {
+        //   minChunks: 2,
+        //   priority: -20,
+        //   reuseExistingChunk: true
+        // }
+      }
+    }
+  }
 })

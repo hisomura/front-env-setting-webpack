@@ -10,10 +10,10 @@
   },
   "globals": {
     "jQuery": "readonly",
-    "$": "readonly"
+    "$": "readonly",
+    "utils": "readonly"
   },
   "rules": {
-    "no-undef": "off",
     "semi": ["error", "never"]
   }
 }
