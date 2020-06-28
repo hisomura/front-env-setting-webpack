@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "webpack": "webpack --display-origins"
+    "cleanup": "npx rimraf ./public",
+    "dev": "npm run cleanup && npx webpack --config webpack.dev.js",
+    "prod": "npm run cleanup && npx webpack --config webpack.prod.js"
   },
   "dependencies": {},
   "devDependencies": {
@@ -27,7 +29,9 @@
     "eslint-loader": "^4.0.2",
     "babel-eslint": "^10.1.0",
     "html-webpack-plugin": "^4.3.0",
-    "html-loader": "^1.1.0"
+    "html-loader": "^1.1.0",
+    "webpack-merge": "^4.2.2",
+    "rimraf": "^3.0.2"
   },
   "browserslist": [
     ",> 0.1%",

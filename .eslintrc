@@ -10,8 +10,7 @@
   },
   "globals": {
     "jQuery": "readonly",
-    "$": "readonly",
-    "g" : "writable"
+    "$": "readonly"
   },
   "rules": {
     "no-undef": "off",
