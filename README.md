@@ -6,3 +6,5 @@ https://www.udemy.com/course/front-env-setting-webpack/
 production modeではhtml-loaderとwebpack-html-pluginがそれぞれHTMLをminifyしてるようだった。  
 CSSは明示的にminifyしているわけではなさそうだったものの、sass-loaderが後続のプラグインにデータを渡す際に1列にしているせいか、
 結果的にminifyされているようだった。とりあえず不要そうなので一旦スキップ
+
+Jetbrains のIDEにwebpack.common.jsを設定したけど、app.css内からのリソース参照で自動補完がされなかった。  
